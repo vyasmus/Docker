@@ -2,13 +2,13 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub-cred-raja')
+		DOCKERHUB_CREDENTIALS=credentials('dckr_pat_9T5vkoJqu0IbCd1vnUZhyLoNqp4')
 	}
 
 	stages {
 		stage('Build') {
 			steps {
-				sh 'docker build -t bharathirajatut/nodeapp:latest .'
+				sh 'docker build -t vyasmus/hello-world:latest .'
 			}
 		}
 		stage('Login') {
@@ -18,7 +18,7 @@ pipeline{
 		}
 		stage('Push') {
 			steps {
-				sh 'docker push bharathirajatut/nodeapp:latest'
+				sh 'docker push vyasmus/hello-world:latest'
 			}
 		}
 	}

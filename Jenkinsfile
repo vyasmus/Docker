@@ -1,10 +1,6 @@
 pipeline{
 	agent any
 
-	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dckr_pat_9T5vkoJqu0IbCd1vnUZhyLoNqp4')
-	}
-
 	stages {
 		stage('Build') {
 			steps {
